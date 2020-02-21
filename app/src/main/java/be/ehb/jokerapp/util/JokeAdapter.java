@@ -1,6 +1,7 @@
 package be.ehb.jokerapp.util;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -20,15 +22,30 @@ import be.ehb.jokerapp.model.Joke;
  */
 public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeViewHolder> {
 
-    class JokeViewHolder extends RecyclerView.ViewHolder{
+    class JokeViewHolder extends RecyclerView.ViewHolder {
 
         final TextView tvSetup;
         final Button btnClou;
+
+        final View.OnClickListener detailListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //welke card?
+                int position = getAdapterPosition();
+                // data in de bundle om door te geven
+                Bundle data = new Bundle();
+                // navigatie starten
+                data.putSerializable("passedJoke", items.get(position));
+                Navigation.findNavController(v).navigate(R.id.jokelist_to_details, data);
+
+            }
+        };
 
         public JokeViewHolder(@NonNull View itemView) {
             super(itemView);
             tvSetup = itemView.findViewById(R.id.tv_setup);
             btnClou = itemView.findViewById(R.id.btn_clou);
+            btnClou.setOnClickListener(detailListener);
         }
     }
 
@@ -60,7 +77,7 @@ public class JokeAdapter extends RecyclerView.Adapter<JokeAdapter.JokeViewHolder
         return items.size();
     }
 
-    public void addItems( ArrayList<Joke> jokes){
+    public void addItems(ArrayList<Joke> jokes) {
         items.clear();
         items.addAll(jokes);
     }

@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
+    android:label="@string/app_name"
     app:startDestination="@id/startFragment">
 
     <fragment
@@ -26,10 +27,10 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="be.ehb.jokerapp.fragments.DetailFragment"
-        android:label="fragment_detail"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_detail" >
         <argument
-            android:name="PassedJoke"
+            android:name="passedJoke"
             app:argType="be.ehb.jokerapp.model.Joke" />
     </fragment>
 </navigation>
