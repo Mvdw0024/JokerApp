@@ -33,4 +33,8 @@
             android:name="passedJoke"
             app:argType="be.ehb.jokerapp.model.Joke" />
     </fragment>
+    <fragment
+        android:id="@+id/prefFragment"
+        android:name="be.ehb.jokerapp.fragments.prefFragment"
+        android:label="Settings" />
 </navigation>
