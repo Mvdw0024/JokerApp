@@ -26,6 +26,20 @@ public class JokeViewModel extends ViewModel {
         newJokes.add(new Joke("Het is zwart en als het uit een boom valt is uw kachel kapot", "uw kachel"));
         newJokes.add(new Joke("Het is grijs en als het in uw oog vliegt zijt ge dood", "een Boeing"));
         newJokes.add(new Joke("Have you heard about the german sausage?", "it was the Wurst"));
+        newJokes.add(new Joke("What do you call the security outside of a Samsung Store?", "Guardians of the Galaxy"));
+        newJokes.add(new Joke("What do we call a crying sister?\n", "a crysis"));
+        newJokes.add(new Joke("Why was the stadium so cold?", "There were a lot of fans"));
+        newJokes.add(new Joke("What are the strongest days of the week?l", "Saturday and Sunday the rest are week days."));
+        newJokes.add(new Joke("I have a lot of good jokes about unemployed people...", "but none of them work"));
+        newJokes.add(new Joke("Why can't a bike stand up on it's own?", "Because it's two tired"));
+        newJokes.add(new Joke("My friend David lost his ID.", "Now I call him Dav"));
+        newJokes.add(new Joke("What is the slipperiest country in the world?", "Greece"));
+        newJokes.add(new Joke("Why doesn't Pac-Man use Twitter?", "He doesn't like being followed..."));
+        newJokes.add(new Joke("Have you ever watched the movie \"Constipated\"?", "It hasn't come out yet"));
+        newJokes.add(new Joke("What do you call a sad cup of coffee?", "a Depresso"));
+
+
+
 
         jokes.setValue(newJokes);
     }
