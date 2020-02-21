@@ -18,5 +18,18 @@
         android:id="@+id/jokeListFragment"
         android:name="be.ehb.jokerapp.fragments.JokeListFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_joke_list" />
+        tools:layout="@layout/fragment_joke_list" >
+        <action
+            android:id="@+id/jokelist_to_details"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="be.ehb.jokerapp.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="PassedJoke"
+            app:argType="be.ehb.jokerapp.model.Joke" />
+    </fragment>
 </navigation>
